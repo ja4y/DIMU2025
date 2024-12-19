@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGITAALINEN MUOTOILU</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="dimu_favicon.svg" />
+    <!-- montserrat fontti -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- some ikonit -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-container">
+      <!-- header -->
+      <header class="header">
+        <a
+          href="https://www.metropolia.fi"
+          target="_blank"
+          class="metropolia-logo"
+        >
+          <img
+            src="metropolia_s_valkoinen.png"
+            alt="Metropolian logo"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <h1>DIGITAALINEN MUOTOILU</h1>
+      </header>
+
+      <!-- nävi -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="#mitä">MITÄ</a></li>
+          <li><a href="#millaista">MILLAISTA</a></li>
+          <li><a href="#missä">MISSÄ</a></li>
+          <li><a href="#miten">MITEN</a></li>
+          <li><a href="#ukk">UKK</a></li>
+        </ul>
+      </nav>
+
+      <!-- Pääsisältö -->
+      <main class="main-content">
+        <!-- Lisää tähän sivun muu sisältö -->
+        <section>
+          <p>Tämä on pääsisältö</p>
+        </section>
+      </main>
+
+      <!-- footeriii -->
+      <footer class="footer">
+        <div class="profiles">
+          <p>SIVUN TEKIVÄT ENSIMMÄISEN VUODEN OPISKELIJAT</p>
+          <div class="profile">
+            <img src="emma.jpg" alt="Emma" />
+            <p>Emma</p>
+          </div>
+          <div class="profile">
+            <img src="oskari.jpg" alt="Oskari" />
+            <p>Oskari</p>
+          </div>
+          <div class="profile">
+            <img src="eljas.jpg" alt="Eljas" />
+            <p>Eljas</p>
+          </div>
+          <div class="profile">
+            <img src="jay.jpg" alt="Jayson" />
+            <p>Jayson</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <a href="https://www.tiktok.com/@digimuotoilu.metropolia">
+            <i class="fab fa-tiktok"></i
+          ></a>
+          <a href="https://www.instagram.com/digimuotoilu.metropolia/">
+            <i class="fab fa-instagram"></i
+          ></a>
+
+          <a href="https://www.metropolia.fi" target="_blank">
+            <img
+              src="metropolia_s_valkoinen.png"
+              alt="Metropolian logo"
+              class="footer-logo"
+            />
+          </a>
+        </div>
+
+        <p class="footer-text">
+          &copy; 2024 DIMU. Metropolia ammattikorkeakoulu, Arabian kampus,
+          Hämeentie 135 D, 00560 Helsinki
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navMenu = document.getElementById("nav-menu");
+
+        menuToggle.addEventListener("click", () => {
+          menuToggle.classList.toggle("active");
+          navMenu.classList.toggle("active");
+        });
+
+        // Sulje valikko, kun linkkiä klikataan mobiilnäkymässä
+        const navLinks = document.querySelectorAll(".nav-menu a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            menuToggle.classList.remove("active");
+            navMenu.classList.remove("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
